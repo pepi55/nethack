@@ -1,0 +1,37 @@
+# === OPTIONS ===
+# appearance
+OPTIONS=color, hilite_pet, lit_corridor, menucolors, DECgraphics, boulder:8
+OPTIONS=showexp, showscore, time
+OPTIONS=msg_window:f, sortloot=loot, disclose:+i+a+v+g+c
+# controls
+OPTIONS=autodig, autopickup, pickup_types:$"?+!=/, runmode:crawl
+# names
+OPTIONS=catname:Morris, dogname:Fido, horsename:Ocelote, fruit:slime mold.  You die..
+
+# === MENUCOLOR ===
+# lightcyan - good food
+# orange - cursed (or under +0)
+# yellow - not cursed
+# lightgreen - blessed
+MENUCOLOR="safe"=yellow
+MENUCOLOR="[0-9]:[0-9]"=yellow
+MENUCOLOR="\+[0-9]"=yellow
+MENUCOLOR="[Cc]ursed"=orange
+MENUCOLOR="[Uu]ncursed"=yellow
+MENUCOLOR="[Bb]lessed"=lightgreen
+MENUCOLOR="-[0-9]"=orange
+
+MENUCOLOR="safe .* ([a-z]"=yellow,&underline
+MENUCOLOR="+[0-9] .* ([a-z]"=yellow&underline
+MENUCOLOR="[Cc]ursed .* ([a-z]"=orange&underline
+MENUCOLOR="[Uu]ncursed .* ([a-z]"=yellow&underline
+MENUCOLOR="[Bb]lessed .* ([a-z]"=lightgreen&underline
+MENUCOLOR="-[0-9] .* ([a-z]"=orange&underline
+
+# lightcyan - good food
+# lightgreen - lichen corpse
+# lightmagenta - lizard corpse
+MENUCOLOR="ration"=lightcyan
+MENUCOLOR="lembas wafer"=lightcyan
+MENUCOLOR="lichen corpse"=lightgreen
+MENUCOLOR="lizard corpse"=lightmagenta
